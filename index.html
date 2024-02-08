@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Project</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #counter {
+            font-size: 5em;
+            margin-bottom: 20px;
+        }
+        #increaseBtn {
+            font-size: 2em;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="counter">0</div>
+    <button id="increaseBtn">Increase</button>
+    <script>
+        const counter = document.getElementById('counter');
+        const increaseBtn = document.getElementById('increaseBtn');
+
+        increaseBtn.addEventListener('click', () => {
+            let count = parseInt(counter.innerText);
+            count++;
+            counter.innerText = count;
+        });
+    </script>
+</body>
+</html>
